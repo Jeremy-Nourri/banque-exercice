@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Enter le numéro de téléphone du client ");
         int telephone = scanner.nextInt();
 
-        Client client = new Client(nom, prenom, telephone, null);
+        Client client = new Client(nom, prenom, telephone,);
 
         System.out.println("============================");
         System.out.println("====== Menu Principal ======");
@@ -39,13 +39,13 @@ public class Main {
                 int accountChoice = scanner.nextInt();
                 switch (accountChoice) {
                     case 1:
-                        CompteBancaire compteCourant = new CompteCourant(0, client, null);
+                        CompteBancaire compteCourant = new CompteCourant(client);
                         break;
                     case 2:
-                        CompteBancaire compteEpargne = new CompteEpargne(0, client, null);
+                        CompteBancaire compteEpargne = new CompteEpargne(client);
                         break;
                     case 3:
-                        CompteBancaire comptePayant = new ComptePayant(0, client, null);
+                        CompteBancaire comptePayant = new ComptePayant(client);
                         break;
             default:
                 System.out.println("Choix invalide");

@@ -10,11 +10,10 @@ public class Client {
 
     protected List<CompteBancaire> listeDesComptes;
 
-    public Client(String nom, String prenom, int numeroTelephone, List<CompteBancaire> listeDesComptes) {
+    public Client(String nom, String prenom, int numeroTelephone) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroTelephone = numeroTelephone;
-        this.listeDesComptes = listeDesComptes;
     }
 
     public String getNom() {

@@ -1,5 +1,6 @@
 package Banque;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CompteBancaire {
@@ -8,10 +9,10 @@ public abstract class CompteBancaire {
     private List<Operation> operations;
 
 
-    public CompteBancaire(double solde, Client client, List<Operation> operations) {
-        this.solde = solde;
+    public CompteBancaire(Client client) {
+        this.solde = 0;
         this.client = client;
-        this.operations = operations;
+        this.operations = new ArrayList<>();
     }
 
     public List<Operation> getOperations() {
